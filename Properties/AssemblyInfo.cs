@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Times")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Times")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
+[assembly: AssemblyCopyright("Copyright © Panagiotis Dimopoulos")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
