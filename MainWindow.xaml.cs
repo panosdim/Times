@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -59,7 +59,8 @@ namespace Times
 
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        	if (PropertyChanged != null)
+            	PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public MainWindow()
@@ -112,7 +113,11 @@ namespace Times
                 }
 
                 monthDifference = monthOvertime - monthDelay;
-                Value = 60 - Math.Abs(monthDifference);
+                if (monthOvertime < monthDelay) {
+                	Value = 60 - Math.Abs(monthDifference);
+                } else {
+                	Value = 60;
+                }
 
                 // Set the style
                 cldTimes.CalendarDayButtonStyle = st;
